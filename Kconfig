@@ -1,0 +1,15 @@
+menu "Thread Configuration"
+    config THREAD_PRIORITY
+        int "Thread priority"
+        default 5
+        help
+          This option defines the maximum thread priority that can be assigned to a thread.
+
+    config THREAD_STACK_SIZE
+        int "Thread stack size"
+        default 512
+        help
+          This option defines the default stack size for threads.
+endmenu
+
+source "Kconfig.zephyr"
